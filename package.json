@@ -1,0 +1,22 @@
+{
+  "name": "jq-for-webbies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run css && eleventy",
+    "css": "node-sass ./src/scss -o ./_site/assets/css",
+    "dev": "npm run css; node-sass --watch -o ./_site/assets/css ./src/scss & eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Remy Sharp (https://remysharp.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "date-fns": "^1.30.1",
+    "markdown-it-attrs": "^2.3.4",
+    "node-sass": "^4.12.0",
+    "nord": "^0.2.1",
+    "undefsafe": "^2.0.2"
+  }
+}
