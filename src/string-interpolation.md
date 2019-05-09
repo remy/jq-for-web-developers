@@ -12,7 +12,7 @@ JavaScript has [template literals](https://developer.mozilla.org/en-US/docs/Web/
 
 So using JavaScript as our common base of knowledge, let's take the following JSON and transform it into a human readable string:
 
-```json
+```json{id="source"}
 {
   "input": {
     "size": 395047,
@@ -52,9 +52,8 @@ Inside this placeholder, any valid jq command can run, so we can access object p
 
 Assuming the source data is stored in compression.json, we can print the sizes using the following:
 
-```bash
-$ cat compression.json | jq '"\(.input.size / 1024) > \(.output.size / 1024)"'
-> "385.7880859375 > 88.201171875"
+```jq{data-source="#source"}
+"\(.input.size / 1024) > \(.output.size / 1024)"
 ```
 
 Before we add the compression saving, I can see two problems with the output: the floating points and the result is quoted - which we don't want.
@@ -69,18 +68,16 @@ Originally I had wanted to _round_ the result, but my own version of jq throws a
 jq: error: round/0 is not defined at <top-level>
 ```
 
-A reasonable workaround was to use `floor` (as I did in the JavaScript example). The `floor` function would be used as any other function in jq:
+A reasonable workaround was to use `floor` (as I did in the JavaScript example). The `floor` function would be used as any other function in jq. If I pass in the value `10.55` to jq:
 
-```bash
-$ echo 10.55 | jq floor # aka `. | floor`
-> 10
+```jq{data-source="10.55"}
+floor # aka `echo "10.55" | jq '. | floor'`
 ```
 
 So adding `floor` to the original example, it goes _inside_ the placeholder:
 
-```bash
-$ cat compression.json | jq '"\(.input.size / 1024 | floor) > \(.output.size / 1024 | floor)"'
-> "385 > 88"
+```jq{data-source="#source"}
+"\(.input.size / 1024 | floor) > \(.output.size / 1024 | floor)"
 ```
 
 Better. Now to remove those pesky quotes marks.
@@ -91,23 +88,22 @@ The default output for jq is JSON, so it stands to reason that a string would be
 
 To remove these, it's an argument to jq itself, using the `-r` or `--raw-output` option:
 
-```bash
-$ cat compression.json | jq -r '"\(.input.size / 1024 | floor) > \(.output.size / 1024 | floor)"'
-> 385 > 88
+```jq{data-source="#source" data-options="-r"}
+"\(.input.size / 1024 | floor) > \(.output.size / 1024 | floor)"
 ```
+`> 385 > 88`
 
 ## Final interpolation
 
 The final result needs the compression saving, so we add that with another string interpolation:
 
-```bash
-$ cat compression.json | jq -r '"\(.input.size / 1024 | floor)Kb > \(.output.size / 1024 | floor)Kb, saving \((1 - .output.ratio) * 100 | floor)%"'
-> 385Kb > 88Kb, saving 77%
+```jq{data-source="#source" data-options="-r"}
+"\(.input.size / 1024 | floor)Kb > \(.output.size / 1024 | floor)Kb, saving \((1 - .output.ratio) * 100 | floor)%"
 ```
 
 An alternative solution:
 
-```
+```jq{data-source="#source" data-options="-r"}
 . + { saving: ((1 - .output.ratio) * 100 | floor) } |
     "\(.input.size / 1024 | floor)Kb > \(.output.size / 1024 | floor)Kb saving \(.saving)%"
 ```

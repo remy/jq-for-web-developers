@@ -11,11 +11,11 @@ var Module = {
   printErr: stderr => STDERR.push(stderr),
   // When the module is ready
   onRuntimeInitialized: function() {
-    console.log('ready');
+    self.postMessage({ type: 'INIT' });
   },
 };
 
-self.importScripts('/vendor/jq/jq.js');
+self.importScripts('/assets/js/jq/jq.js');
 
 // Utility function to run jq
 function jq(jsonStr, query, options) {
@@ -56,5 +56,3 @@ self.addEventListener('message', ({ data }) => {
       self.postMessage({ type: 'RPC', id, error: '' + err });
     });
 });
-
-self.postMessage({ type: 'INIT' });

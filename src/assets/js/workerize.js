@@ -1,5 +1,5 @@
 (() => {
-  const worker = new Worker('/vendor/jq/jq.worker.js');
+  const worker = new Worker('/assets/js/jq/jq.worker.js');
 
   let counter = 0;
   const callbacks = {};
