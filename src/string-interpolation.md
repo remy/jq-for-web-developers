@@ -1,6 +1,6 @@
 ---
 layout: 'base'
-order: 5
+order: 6
 title: String interpolation
 ---
 
@@ -91,7 +91,6 @@ To remove these, it's an argument to jq itself, using the `-r` or `--raw-output`
 ```jq{data-source="#source" data-options="-r"}
 "\(.input.size / 1024 | floor) > \(.output.size / 1024 | floor)"
 ```
-`> 385 > 88`
 
 ## Final interpolation
 

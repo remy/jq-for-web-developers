@@ -92,398 +92,103 @@ We'll see a lot more connecting filters in later chapters.
 [
   {
     "sha": "d088cb6e66855bbed04511c15fa12de0f8829237",
-    "node_id": "MDY6Q29tbWl0OTU4MzE0OmQwODhjYjZlNjY4NTViYmVkMDQ1MTFjMTVmYTEyZGUwZjg4MjkyMzc=",
     "commit": {
       "author": {
         "name": "Remy Sharp",
         "email": "remy@remysharp.com",
         "date": "2019-05-08T10:12:13Z"
       },
-      "committer": {
-        "name": "GitHub",
-        "email": "noreply@github.com",
-        "date": "2019-05-08T10:12:13Z"
-      },
-      "message": "chore: update stalebot\n\n[skip ci]",
-      "tree": {
-        "sha": "d6afe2afea488290fbad21a92bed2dd56b5e8e90",
-        "url": "https://api.github.com/repos/remy/nodemon/git/trees/d6afe2afea488290fbad21a92bed2dd56b5e8e90"
-      },
-      "url": "https://api.github.com/repos/remy/nodemon/git/commits/d088cb6e66855bbed04511c15fa12de0f8829237",
-      "comment_count": 0,
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJc0qt9CRBK7hj4Ov3rIwAAdHIIABbHEv62Kukshw9kcW1SVY2L\nRa2r1Sxy3xV6lPXneNXRyv1yxoTyRSEc5v6I69RhP+mjAV7f1mJRAOJ9tvFltku9\nXG7qbqMUsAszNQdCPIfKvvzQexp0iAnFTO4OzQn7chfyB3UzTAkEZfpHTtMg/Io4\nANPws8VaF7hvxyEdIVdww2iZj7fr3okq57dIF19ZplI5/H6BXuqyV2/r9J+UD7T3\nadbrQJsnKKDdNZno+J+bAO0oKzc9eq9pxwxHezwbHqxddXEYLnsA/Zbz9Y8Ba9Fk\nOUKoi9lNbqnk/aNBMQqQanbfuywMn/xaq4lg9bRdruxm4jXYsZZK4beAynvIU5I=\n=O7X8\n-----END PGP SIGNATURE-----\n",
-        "payload": "tree d6afe2afea488290fbad21a92bed2dd56b5e8e90\nparent 20ccb623c4dbdbc9445085ba72ca7ab90f5bffcb\nauthor Remy Sharp <remy@remysharp.com> 1557310333 +0100\ncommitter GitHub <noreply@github.com> 1557310333 +0100\n\nchore: update stalebot\n\n[skip ci]"
-      }
+      "message": "chore: update stalebot\n\n[skip ci]"
     },
     "url": "https://api.github.com/repos/remy/nodemon/commits/d088cb6e66855bbed04511c15fa12de0f8829237",
-    "html_url": "https://github.com/remy/nodemon/commit/d088cb6e66855bbed04511c15fa12de0f8829237",
-    "comments_url": "https://api.github.com/repos/remy/nodemon/commits/d088cb6e66855bbed04511c15fa12de0f8829237/comments",
     "author": {
       "login": "remy",
-      "id": 13700,
-      "node_id": "MDQ6VXNlcjEzNzAw",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/13700?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/remy",
-      "html_url": "https://github.com/remy",
-      "followers_url": "https://api.github.com/users/remy/followers",
-      "following_url": "https://api.github.com/users/remy/following{/other_user}",
-      "gists_url": "https://api.github.com/users/remy/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/remy/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/remy/subscriptions",
-      "organizations_url": "https://api.github.com/users/remy/orgs",
-      "repos_url": "https://api.github.com/users/remy/repos",
-      "events_url": "https://api.github.com/users/remy/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/remy/received_events",
-      "type": "User",
-      "site_admin": false
+      "id": 13700
     },
     "committer": {
       "login": "web-flow",
-      "id": 19864447,
-      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/19864447?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/web-flow",
-      "html_url": "https://github.com/web-flow",
-      "followers_url": "https://api.github.com/users/web-flow/followers",
-      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
-      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
-      "organizations_url": "https://api.github.com/users/web-flow/orgs",
-      "repos_url": "https://api.github.com/users/web-flow/repos",
-      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/web-flow/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "20ccb623c4dbdbc9445085ba72ca7ab90f5bffcb",
-        "url": "https://api.github.com/repos/remy/nodemon/commits/20ccb623c4dbdbc9445085ba72ca7ab90f5bffcb",
-        "html_url": "https://github.com/remy/nodemon/commit/20ccb623c4dbdbc9445085ba72ca7ab90f5bffcb"
-      }
-    ]
+      "id": 19864447
+    }
   },
   {
     "sha": "20ccb623c4dbdbc9445085ba72ca7ab90f5bffcb",
-    "node_id": "MDY6Q29tbWl0OTU4MzE0OjIwY2NiNjIzYzRkYmRiYzk0NDUwODViYTcyY2E3YWI5MGY1YmZmY2I=",
     "commit": {
       "author": {
         "name": "Emily Marigold Klassen",
         "email": "forivall@gmail.com",
         "date": "2019-04-23T19:49:54Z"
       },
-      "committer": {
-        "name": "Remy Sharp",
-        "email": "remy@remysharp.com",
-        "date": "2019-05-01T07:05:47Z"
-      },
-      "message": "feat: add message event\n\nadd event to listen to messages coming from the child's ipc events, partially implementing #1519",
-      "tree": {
-        "sha": "19cd06833ac60746f558e4220b4cbaacbc7febc9",
-        "url": "https://api.github.com/repos/remy/nodemon/git/trees/19cd06833ac60746f558e4220b4cbaacbc7febc9"
-      },
-      "url": "https://api.github.com/repos/remy/nodemon/git/commits/20ccb623c4dbdbc9445085ba72ca7ab90f5bffcb",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
+      "message": "feat: add message event\n\nadd event to listen to messages coming from the child's ipc events, partially implementing #1519"
     },
     "url": "https://api.github.com/repos/remy/nodemon/commits/20ccb623c4dbdbc9445085ba72ca7ab90f5bffcb",
-    "html_url": "https://github.com/remy/nodemon/commit/20ccb623c4dbdbc9445085ba72ca7ab90f5bffcb",
-    "comments_url": "https://api.github.com/repos/remy/nodemon/commits/20ccb623c4dbdbc9445085ba72ca7ab90f5bffcb/comments",
     "author": {
       "login": "forivall",
-      "id": 760204,
-      "node_id": "MDQ6VXNlcjc2MDIwNA==",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/760204?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/forivall",
-      "html_url": "https://github.com/forivall",
-      "followers_url": "https://api.github.com/users/forivall/followers",
-      "following_url": "https://api.github.com/users/forivall/following{/other_user}",
-      "gists_url": "https://api.github.com/users/forivall/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/forivall/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/forivall/subscriptions",
-      "organizations_url": "https://api.github.com/users/forivall/orgs",
-      "repos_url": "https://api.github.com/users/forivall/repos",
-      "events_url": "https://api.github.com/users/forivall/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/forivall/received_events",
-      "type": "User",
-      "site_admin": false
+      "id": 760204
     },
     "committer": {
       "login": "remy",
-      "id": 13700,
-      "node_id": "MDQ6VXNlcjEzNzAw",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/13700?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/remy",
-      "html_url": "https://github.com/remy",
-      "followers_url": "https://api.github.com/users/remy/followers",
-      "following_url": "https://api.github.com/users/remy/following{/other_user}",
-      "gists_url": "https://api.github.com/users/remy/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/remy/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/remy/subscriptions",
-      "organizations_url": "https://api.github.com/users/remy/orgs",
-      "repos_url": "https://api.github.com/users/remy/repos",
-      "events_url": "https://api.github.com/users/remy/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/remy/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "886527f1f0a9249e1a044fd652b7519d1c0dc50e",
-        "url": "https://api.github.com/repos/remy/nodemon/commits/886527f1f0a9249e1a044fd652b7519d1c0dc50e",
-        "html_url": "https://github.com/remy/nodemon/commit/886527f1f0a9249e1a044fd652b7519d1c0dc50e"
-      }
-    ]
+      "id": 13700
+    }
   },
   {
     "sha": "886527f1f0a9249e1a044fd652b7519d1c0dc50e",
-    "node_id": "MDY6Q29tbWl0OTU4MzE0Ojg4NjUyN2YxZjBhOTI0OWUxYTA0NGZkNjUyYjc1MTlkMWMwZGM1MGU=",
     "commit": {
       "author": {
         "name": "Emily Marigold Klassen",
         "email": "forivall@gmail.com",
         "date": "2019-04-23T19:38:28Z"
       },
-      "committer": {
-        "name": "Remy Sharp",
-        "email": "remy@remysharp.com",
-        "date": "2019-05-01T07:05:18Z"
-      },
-      "message": "fix: disable fork only if string starts with dash\n\nfixes #1554",
-      "tree": {
-        "sha": "5462f83be59aff01cb0783fa24a8061f0c1f8b84",
-        "url": "https://api.github.com/repos/remy/nodemon/git/trees/5462f83be59aff01cb0783fa24a8061f0c1f8b84"
-      },
-      "url": "https://api.github.com/repos/remy/nodemon/git/commits/886527f1f0a9249e1a044fd652b7519d1c0dc50e",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
+      "message": "fix: disable fork only if string starts with dash\n\nfixes #1554"
     },
     "url": "https://api.github.com/repos/remy/nodemon/commits/886527f1f0a9249e1a044fd652b7519d1c0dc50e",
-    "html_url": "https://github.com/remy/nodemon/commit/886527f1f0a9249e1a044fd652b7519d1c0dc50e",
-    "comments_url": "https://api.github.com/repos/remy/nodemon/commits/886527f1f0a9249e1a044fd652b7519d1c0dc50e/comments",
     "author": {
       "login": "forivall",
-      "id": 760204,
-      "node_id": "MDQ6VXNlcjc2MDIwNA==",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/760204?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/forivall",
-      "html_url": "https://github.com/forivall",
-      "followers_url": "https://api.github.com/users/forivall/followers",
-      "following_url": "https://api.github.com/users/forivall/following{/other_user}",
-      "gists_url": "https://api.github.com/users/forivall/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/forivall/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/forivall/subscriptions",
-      "organizations_url": "https://api.github.com/users/forivall/orgs",
-      "repos_url": "https://api.github.com/users/forivall/repos",
-      "events_url": "https://api.github.com/users/forivall/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/forivall/received_events",
-      "type": "User",
-      "site_admin": false
+      "id": 760204
     },
     "committer": {
       "login": "remy",
-      "id": 13700,
-      "node_id": "MDQ6VXNlcjEzNzAw",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/13700?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/remy",
-      "html_url": "https://github.com/remy",
-      "followers_url": "https://api.github.com/users/remy/followers",
-      "following_url": "https://api.github.com/users/remy/following{/other_user}",
-      "gists_url": "https://api.github.com/users/remy/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/remy/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/remy/subscriptions",
-      "organizations_url": "https://api.github.com/users/remy/orgs",
-      "repos_url": "https://api.github.com/users/remy/repos",
-      "events_url": "https://api.github.com/users/remy/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/remy/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "64b474e9f3c24cd4c1f360a73da3d675559b3b3e",
-        "url": "https://api.github.com/repos/remy/nodemon/commits/64b474e9f3c24cd4c1f360a73da3d675559b3b3e",
-        "html_url": "https://github.com/remy/nodemon/commit/64b474e9f3c24cd4c1f360a73da3d675559b3b3e"
-      }
-    ]
+      "id": 13700
+    }
   },
   {
     "sha": "64b474e9f3c24cd4c1f360a73da3d675559b3b3e",
-    "node_id": "MDY6Q29tbWl0OTU4MzE0OjY0YjQ3NGU5ZjNjMjRjZDRjMWYzNjBhNzNkYTNkNjc1NTU5YjNiM2U=",
     "commit": {
       "author": {
         "name": "Leonardo Dino",
         "email": "leonardodino@users.noreply.github.com",
         "date": "2019-05-01T07:04:44Z"
       },
-      "committer": {
-        "name": "Remy Sharp",
-        "email": "remy@remysharp.com",
-        "date": "2019-05-01T07:04:44Z"
-      },
-      "message": "feat: add TypeScript to default execPath (#1552)\n\n`ts-node` is the standard for running typescript node programs on development mode.\r\n\r\nAdding this line will enable everyone with a `tsconfig.json` to have a full-refresh server watching experience. (:",
-      "tree": {
-        "sha": "37643473f3f13648cf5a6d17721cbd047521bc34",
-        "url": "https://api.github.com/repos/remy/nodemon/git/trees/37643473f3f13648cf5a6d17721cbd047521bc34"
-      },
-      "url": "https://api.github.com/repos/remy/nodemon/git/commits/64b474e9f3c24cd4c1f360a73da3d675559b3b3e",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
+      "message": "feat: add TypeScript to default execPath (#1552)\n\n`ts-node` is the standard for running typescript node programs on development mode.\r\n\r\nAdding this line will enable everyone with a `tsconfig.json` to have a full-refresh server watching experience. (:"
     },
     "url": "https://api.github.com/repos/remy/nodemon/commits/64b474e9f3c24cd4c1f360a73da3d675559b3b3e",
-    "html_url": "https://github.com/remy/nodemon/commit/64b474e9f3c24cd4c1f360a73da3d675559b3b3e",
-    "comments_url": "https://api.github.com/repos/remy/nodemon/commits/64b474e9f3c24cd4c1f360a73da3d675559b3b3e/comments",
     "author": {
       "login": "leonardodino",
-      "id": 8649362,
-      "node_id": "MDQ6VXNlcjg2NDkzNjI=",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/8649362?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/leonardodino",
-      "html_url": "https://github.com/leonardodino",
-      "followers_url": "https://api.github.com/users/leonardodino/followers",
-      "following_url": "https://api.github.com/users/leonardodino/following{/other_user}",
-      "gists_url": "https://api.github.com/users/leonardodino/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/leonardodino/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/leonardodino/subscriptions",
-      "organizations_url": "https://api.github.com/users/leonardodino/orgs",
-      "repos_url": "https://api.github.com/users/leonardodino/repos",
-      "events_url": "https://api.github.com/users/leonardodino/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/leonardodino/received_events",
-      "type": "User",
-      "site_admin": false
+      "id": 8649362
     },
     "committer": {
       "login": "remy",
-      "id": 13700,
-      "node_id": "MDQ6VXNlcjEzNzAw",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/13700?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/remy",
-      "html_url": "https://github.com/remy",
-      "followers_url": "https://api.github.com/users/remy/followers",
-      "following_url": "https://api.github.com/users/remy/following{/other_user}",
-      "gists_url": "https://api.github.com/users/remy/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/remy/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/remy/subscriptions",
-      "organizations_url": "https://api.github.com/users/remy/orgs",
-      "repos_url": "https://api.github.com/users/remy/repos",
-      "events_url": "https://api.github.com/users/remy/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/remy/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "2973afbd26e2c9a9f9676fed8ab63999022ea7ca",
-        "url": "https://api.github.com/repos/remy/nodemon/commits/2973afbd26e2c9a9f9676fed8ab63999022ea7ca",
-        "html_url": "https://github.com/remy/nodemon/commit/2973afbd26e2c9a9f9676fed8ab63999022ea7ca"
-      }
-    ]
+      "id": 13700
+    }
   },
   {
     "sha": "2973afbd26e2c9a9f9676fed8ab63999022ea7ca",
-    "node_id": "MDY6Q29tbWl0OTU4MzE0OjI5NzNhZmJkMjZlMmM5YTlmOTY3NmZlZDhhYjYzOTk5MDIyZWE3Y2E=",
     "commit": {
       "author": {
         "name": "Emily Marigold Klassen",
         "email": "forivall@gmail.com",
         "date": "2019-05-01T07:04:25Z"
       },
-      "committer": {
-        "name": "Remy Sharp",
-        "email": "remy@remysharp.com",
-        "date": "2019-05-01T07:04:25Z"
-      },
-      "message": "fix: Quote zero-length strings in arguments (#1551)\n\nIf a zero-length string is passed, it does not get properly quoted, and then it is not properly passed to the child process",
-      "tree": {
-        "sha": "e2eac19bcfadbc07a3969b837264210f06d90b53",
-        "url": "https://api.github.com/repos/remy/nodemon/git/trees/e2eac19bcfadbc07a3969b837264210f06d90b53"
-      },
-      "url": "https://api.github.com/repos/remy/nodemon/git/commits/2973afbd26e2c9a9f9676fed8ab63999022ea7ca",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
+      "message": "fix: Quote zero-length strings in arguments (#1551)\n\nIf a zero-length string is passed, it does not get properly quoted, and then it is not properly passed to the child process"
     },
     "url": "https://api.github.com/repos/remy/nodemon/commits/2973afbd26e2c9a9f9676fed8ab63999022ea7ca",
-    "html_url": "https://github.com/remy/nodemon/commit/2973afbd26e2c9a9f9676fed8ab63999022ea7ca",
-    "comments_url": "https://api.github.com/repos/remy/nodemon/commits/2973afbd26e2c9a9f9676fed8ab63999022ea7ca/comments",
     "author": {
       "login": "forivall",
-      "id": 760204,
-      "node_id": "MDQ6VXNlcjc2MDIwNA==",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/760204?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/forivall",
-      "html_url": "https://github.com/forivall",
-      "followers_url": "https://api.github.com/users/forivall/followers",
-      "following_url": "https://api.github.com/users/forivall/following{/other_user}",
-      "gists_url": "https://api.github.com/users/forivall/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/forivall/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/forivall/subscriptions",
-      "organizations_url": "https://api.github.com/users/forivall/orgs",
-      "repos_url": "https://api.github.com/users/forivall/repos",
-      "events_url": "https://api.github.com/users/forivall/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/forivall/received_events",
-      "type": "User",
-      "site_admin": false
+      "id": 760204
     },
     "committer": {
       "login": "remy",
-      "id": 13700,
-      "node_id": "MDQ6VXNlcjEzNzAw",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/13700?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/remy",
-      "html_url": "https://github.com/remy",
-      "followers_url": "https://api.github.com/users/remy/followers",
-      "following_url": "https://api.github.com/users/remy/following{/other_user}",
-      "gists_url": "https://api.github.com/users/remy/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/remy/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/remy/subscriptions",
-      "organizations_url": "https://api.github.com/users/remy/orgs",
-      "repos_url": "https://api.github.com/users/remy/repos",
-      "events_url": "https://api.github.com/users/remy/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/remy/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "aa41ab2124679306000351bef3e9a4366636f72a",
-        "url": "https://api.github.com/repos/remy/nodemon/commits/aa41ab2124679306000351bef3e9a4366636f72a",
-        "html_url": "https://github.com/remy/nodemon/commit/aa41ab2124679306000351bef3e9a4366636f72a"
-      }
-    ]
+      "id": 13700
+    }
   }
 ]
 </script>

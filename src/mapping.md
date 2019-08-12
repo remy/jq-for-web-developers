@@ -98,9 +98,7 @@ There's a few parts to a reduce function:
 
 The final output is the last value returned from reduce function.
 
-For example:
-
-If I have an array of
+_For example:_
 
 To count the number of words in all the commit data written by me, Remy, in JavaScript my code would join a `filter` to a `map` and store the array of commit messages in `messages` variable. Then run that array through a reduce as so:
 

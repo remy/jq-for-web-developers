@@ -1,5 +1,9 @@
 @import './nord';
 
+[hidden] {
+  display: none !important;
+}
+
 // vars
 html {
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
@@ -98,19 +102,11 @@ html {
     border: 2px solid var(--text-highlight);
   }
 
-  nav a {
-    color: var(--text);
-    &:hover {
-      background: var(--accent);
-      border-radius: 2px;
-      text-decoration: none;
-    }
-  }
-
   code,
   pre,
   .input {
     background: var(--accent);
+    position: relative;
   }
 
   .input:focus {
@@ -120,7 +116,6 @@ html {
 
   pre {
     border-color: var(--simple-border);
-    // border-image: var(--border-image);
   }
 }
 
@@ -187,10 +182,11 @@ main {
   justify-content: center;
 
   > .content {
+    flex-grow: 1;
     padding: 20px;
 
     @media only screen and (min-width: 400px) {
-      padding: 40px;
+      padding: 20px;
     }
 
     @media only screen and (min-width: 700px) {
@@ -199,8 +195,10 @@ main {
     }
 
     img {
-      max-width: 100%;
+      max-width: calc(100% + 120px);
+      margin: 20px -40px;
       border-radius: 4px;
+      box-shadow: 0px 8px 12px 4px #0000004a;
     }
   }
 
@@ -228,12 +226,14 @@ pre {
   overflow: auto;
   width: 100%;
   padding: 10px;
+  margin: 36px 0;
   border-radius: 4px;
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 800px) {
     border-radius: 8px;
     padding: 20px;
-    margin: 0 -20px;
+    margin: 36px -20px;
+    width: calc(100% + 40px);
     border-width: 4px;
   }
 
@@ -243,6 +243,14 @@ pre {
     border: 2px solid transparent;
     padding: 0;
     border-radius: 0;
+    line-height: 1.6em;
+
+    &.hidden {
+      white-space: pre-line;
+      // opacity: 0;
+      pointer-events: none;
+      display: block;
+    }
   }
 
   code:empty {
@@ -270,13 +278,36 @@ nav {
   margin: 0;
   margin-top: 40px;
 
+  li {
+    transform: opacity ease-out 250ms;
+    opacity: 0.7;
+  }
+
+  li.selected {
+    opacity: 1;
+  }
+
+  &:hover li {
+    opacity: 1;
+  }
+
+  li > a {
+    color: var(--text);
+    &:hover {
+      background: var(--accent);
+      border-radius: 2px;
+      text-decoration: none;
+    }
+  }
+
+
   @media only screen and (min-width: 700px) {
     border: 0;
     margin: 90px 0 40px 0px;
     padding: 0;
   }
 
-  a {
+  li > * {
     text-decoration: none;
     display: block;
     padding: 4px 8px;

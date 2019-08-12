@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16" />
   <title>{{ title or "jq for web developers" }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
@@ -14,6 +16,7 @@
       {%- for link in collections.articles -%}
         <li{% if page.url.startsWith(link.url) %} class="selected"{% endif %}><a href="{{ link.url }}">{{ link.data.title }}</a></li>
       {% endfor %}
+      <li><p>Created by <a href="https://remysharp.com">@rem</a></p></li>
       </ul>
     </nav>
     <div class="content">
@@ -21,7 +24,7 @@
     </div>
   </main>
 
-  <footer><p>Made by <a href="https://twitter.com/rem">@rem</a></p></footer>
+  <!-- <footer><p>Made by <a href="https://twitter.com/rem">@rem</a></p></footer> -->
 
   <script src="/assets/js/runner.js"></script>
 </body>

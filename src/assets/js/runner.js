@@ -26,10 +26,14 @@ function ready() {
       input.value = _.innerText.trim();
       // container.replaceChild(input, _);
       container.prepend(input);
+      _.classList.add('hidden');
       _.hidden = true;
 
       input.oninput = () => {
-        input.rows = input.value.split('\n').length;
+        _.hidden = false;
+        _.innerHTML = input.value.replace(/\n/g, '\n&nbsp;');
+        input.style.height = _.offsetHeight + 'px';
+        _.hidden = true;
       };
       input.oninput();
 
