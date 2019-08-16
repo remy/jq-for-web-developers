@@ -1,0 +1,8 @@
+---
+pagination:
+  data: collections.articles
+  alias: article
+  size: 1
+permalink: /{{ article.fileSlug }}/index.json
+---
+{{ { title: article.data.title, content: article.templateContent } | dump | safe }}

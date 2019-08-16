@@ -8,7 +8,7 @@ title: Running jq
 
 There's a number of options to you to run the jq command. I'd say local installation is a must (so that if all else fails), and thereafter I'd recommend using an interface with live feedback to help speed up the process of learning and tweaking your commands.
 
-You should also note that this book includes live jq examples that you can run and modify in the browser.
+You should also note that this book includes live jq examples that you can run and modify in the browser when you see the "run code" (as below) and modifying the jq statement you can run the query using the keyboard with <kbd>shift</kbd> + <kbd>enter</kbd>
 
 ## Installing jq locally
 
@@ -35,7 +35,7 @@ Though I'd recommend installing the command line regardless, you can also use no
 
 Finally, I've written a Mac app available that's an enhanced version of the jqTerm web site: [jqTerm.app](https://gum.co/jqterm) (under a _pay what you want_ schema).
 
-![Mac App: jqTerm](/assets/img/jqterm-app.png)
+![Mac App: jqTerm](/assets/img/jqterm-app.jpg)
 
 The reason I wrote my own interfaces into jq is that it allows me to get real-time feedback on my queries, whereas the command line requires that I run and re-run queries until I get the solution.
 

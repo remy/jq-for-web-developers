@@ -32,4 +32,8 @@ These days I find that I'm constantly reaching for `jq` either to quickly pick o
 
 This series of posts is designed primarily for web developers with some familiarity with JavaScript, to learn how to manipulate JSON using `jq`.
 
-First things first: let's get `jq` installed.
+First things first: let's get `jq` running.
+
+## Next step
+
+* [Running jq](/running)

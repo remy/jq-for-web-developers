@@ -59,3 +59,7 @@ If I need to build up a more complex query, or work with a JSON structure that I
 Next I'll show you how to navigate JSON and move on to manipulating results.
 
 [jqTerm]: https://jqterm.com/app
+
+## Next steps
+
+- [Querying data](/querying)

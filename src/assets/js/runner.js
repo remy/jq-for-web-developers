@@ -2,12 +2,87 @@
 /* global jq: true */
 
 const escaped = new Map([['<', '&lt;'], ['>', '&gt;']]);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const $ = s => document.querySelector(s);
+let jqLoaded = false;
 
-function ready() {
-  console.log('jq loaded');
+const container = $('main > .content');
+const links = $$('nav a');
 
-  const $ = s => document.getElementById(s.substr(1));
-  Array.from(document.querySelectorAll('.language-jq'))
+window.onpopstate = () => {
+  loadContent(location.pathname);
+};
+
+function loadContent(pathname) {
+  links.forEach(navLink => {
+    navLink.parentNode.classList.remove('selected');
+
+    if (navLink.pathname === pathname) {
+      navLink.parentNode.classList.add('selected');
+    }
+  });
+
+  container.classList.add('loading');
+
+  fetch(pathname + 'index.json')
+    .then(res => res.json())
+    // .then(res => new Promise(resolve => setTimeout(() => resolve(res), 5000)))
+    .then(data => {
+      container.innerHTML = data.content;
+      document.title = data.title;
+      container.classList.remove('loading'); // potential for "cool" effects
+      window.scrollTo(0, 0);
+      container.parentNode.scrollTo(0, 0);
+
+      liveCodeRunner();
+      hookLinks();
+    });
+}
+
+function hookLinks() {
+  $$('a').forEach(link => {
+    if (link.origin !== window.location.origin) {
+      return;
+    }
+
+    if (link.dataset.hooked) {
+      return;
+    }
+
+    link.dataset.hooked = true;
+
+    link.addEventListener(
+      'click',
+      event => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey) {
+          return; // let the browser deal with the click natively
+        }
+
+        event.preventDefault();
+
+        let { pathname } = link;
+
+        if (!pathname.endsWith('/')) {
+          pathname += '/';
+        }
+
+        // don't follow links that are loaded
+        if (pathname === window.location.pathname) {
+          return;
+        }
+
+        window.history.pushState(null, null, pathname);
+
+        loadContent(pathname);
+      },
+      false
+    );
+  });
+}
+
+function liveCodeRunner() {
+  if (!jqLoaded) return;
+  $$('.language-jq')
     .filter(_ => _.dataset.source)
     .map(_ => {
       const container = _.parentNode;
@@ -72,8 +147,10 @@ async function main() {
   script.src = '/assets/js/workerize.js';
   document.head.appendChild(script);
   script.onload = () => {
-    jq.onInitialized = ready;
+    jqLoaded = true;
+    jq.onInitialized = liveCodeRunner;
   };
 }
 
 main();
+hookLinks();

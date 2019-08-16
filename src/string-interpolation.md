@@ -1,6 +1,6 @@
 ---
 layout: 'base'
-order: 6
+order: 8
 title: String interpolation
 ---
 
@@ -80,7 +80,7 @@ So adding `floor` to the original example, it goes _inside_ the placeholder:
 "\(.input.size / 1024 | floor) > \(.output.size / 1024 | floor)"
 ```
 
-Better. Now to remove those pesky quotes marks.
+Better. Now to remove those pesky quotes marks in the result.
 
 ## "Raw" output
 

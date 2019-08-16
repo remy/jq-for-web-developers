@@ -1,6 +1,6 @@
 ---
 layout: 'base'
-order: 5
+order: 7
 title: Processing CSV & Plain text
 ---
 

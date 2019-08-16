@@ -88,6 +88,10 @@ Now the result is correctly formatted as an array containing all the elements.
 
 We'll see a lot more connecting filters in later chapters.
 
+## Next steps
+
+- [Map, filter, reduce](/mapping)
+
 <script type="json" id="commits">
 [
   {

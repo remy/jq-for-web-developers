@@ -68,6 +68,22 @@ html {
     color: var(--text);
   }
 
+  kbd {
+    font-family: var(--font-mono);
+    background-color: var(--nord0);
+    border-radius: 3px;
+    border: 1px solid var(--nord4);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+      0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+    color: var(--nord4);
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+  }
+
   strong {
     color: var(--strong);
   }
@@ -79,6 +95,18 @@ html {
   h5,
   h6 {
     color: var(--heading);
+  }
+
+  h1 {
+    margin: 24px 0;
+  }
+
+  h2 {
+    margin: 20px 0;
+  }
+
+  h3 {
+    margin: 16px 0;
   }
 
   a {
@@ -135,7 +163,7 @@ strong {
 // styles
 html {
   margin: 0;
-  padding: 10px;
+  padding: 12px 10px;
   min-height: 100%;
 
   @media only screen and (min-width: 700px) {
@@ -170,6 +198,7 @@ body {
   font-size: 18px;
   line-height: 1.4;
   font-family: var(--font-body);
+  border-radius: 5px;
 }
 
 main {
@@ -178,6 +207,13 @@ main {
   flex-direction: column-reverse;
   @media only screen and (min-width: 700px) {
     flex-direction: row;
+    height: calc(100vh - 24px);
+    overflow: scroll;
+
+    nav {
+      position: sticky;
+      top: 66px;
+    }
   }
   justify-content: center;
 
@@ -185,18 +221,29 @@ main {
     flex-grow: 1;
     padding: 20px;
 
+    &.loading {
+      opacity: 0.3;
+    }
+
     @media only screen and (min-width: 400px) {
       padding: 20px;
     }
 
     @media only screen and (min-width: 700px) {
       max-width: 680px;
-      padding: 40px 40px 400px 40px;
+      padding: 40px;
+
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 400px;
+      }
     }
 
     img {
-      max-width: calc(100% + 120px);
-      margin: 20px -40px;
+      // max-width: calc(100% + 120px);
+      max-width: 100%;
+      margin: 20px 0;
       border-radius: 4px;
       box-shadow: 0px 8px 12px 4px #0000004a;
     }
@@ -237,6 +284,10 @@ pre {
     border-width: 4px;
   }
 
+  code.result {
+    color: var(--strong);
+    white-space: pre-line;
+  }
 
   code,
   .input {
@@ -279,8 +330,8 @@ nav {
   margin-top: 40px;
 
   li {
-    transform: opacity ease-out 250ms;
-    opacity: 0.7;
+    transition: opacity ease-out 150ms;
+    opacity: 0.5;
   }
 
   li.selected {
@@ -300,10 +351,9 @@ nav {
     }
   }
 
-
   @media only screen and (min-width: 700px) {
     border: 0;
-    margin: 90px 0 40px 0px;
+    margin: 66px 0 40px 0px;
     padding: 0;
   }
 
