@@ -8,6 +8,14 @@ let jqLoaded = false;
 
 const container = $('main > .content');
 const links = $$('nav a');
+const root = document.documentElement;
+
+$('#toggle-theme').onclick = () => {
+  root.classList.toggle('dark');
+  root.classList.toggle('light');
+
+  localStorage.setItem('theme', root.className);
+};
 
 window.onpopstate = () => {
   loadContent(location.pathname);
@@ -82,9 +90,14 @@ function hookLinks() {
 
 function liveCodeRunner() {
   if (!jqLoaded) return;
+
+  $$('pre code').map(_ => (_.textContent = _.textContent.trim()));
+
   $$('.language-jq')
     .filter(_ => _.dataset.source)
     .map(_ => {
+      console.log(_);
+
       const container = _.parentNode;
       const opts = (_.dataset.options || '').split(' ').filter(Boolean);
 

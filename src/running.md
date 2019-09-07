@@ -8,7 +8,11 @@ title: Running jq
 
 There's a number of options to you to run the jq command. I'd say local installation is a must (so that if all else fails), and thereafter I'd recommend using an interface with live feedback to help speed up the process of learning and tweaking your commands.
 
-You should also note that this book includes live jq examples that you can run and modify in the browser when you see the "run code" (as below) and modifying the jq statement you can run the query using the keyboard with <kbd>shift</kbd> + <kbd>enter</kbd>
+You should also note that this book includes live jq examples that you can run and modify in the browser when you see the "run code" (as below) and modifying the jq statement you can run the query using the keyboard with <kbd>shift</kbd> + <kbd>enter</kbd> - you can try it out below:
+
+```jq{data-source="#data"}
+.a + .b
+```
 
 ## Installing jq locally
 
@@ -20,7 +24,7 @@ The latest release of jq can be **[downloaded directly](https://github.com/stedo
 
 jq is also available through a number of package managers, for instance installing using a Mac is a matter of using [brew](https://brew.sh) on the command line:
 
-```
+```bash
 brew install jq
 ```
 
@@ -43,3 +47,7 @@ The reason I wrote my own interfaces into jq is that it allows me to get real-ti
 
 - [How to run jq on the command line](/command-line), or
 - [How to access and query JSON](/querying)
+
+<script id="data" type="application/json">
+{"a": [1,2], "b": [3,4]}
+</script>

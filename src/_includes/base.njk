@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16" />
-  <title>{{ title or "jq for web developers" }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-  <main>
-    <nav>
-      <ul>
-      {%- for link in collections.articles -%}
-        <li{% if page.url.startsWith(link.url) %} class="selected"{% endif %}><a href="{{ link.url }}">{{ link.data.title }}</a></li>
-      {% endfor %}
-      <li><p>Created by <a href="https://remysharp.com">@rem</a></p></li>
-      </ul>
-    </nav>
-    <div class="content">
-      {{ content | safe }}
-    </div>
-  </main>
+  <head>
+      <script>let c = localStorage.getItem('theme'); if (c) document.documentElement.className = c;</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16" />
+    <title>{{ title or "jq for web developers" }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
 
-  <script async defer src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach%2CString.prototype.endsWith%2Cfetch%2CElement.prototype.classList%2CElement.prototype.dataset%2CElement.prototype.append"></script>
-  <script async defer src="/assets/js/runner.js"></script>
-</body>
+  <body>
+    <main>
+      <nav>
+        <ul>
+          {%- for link in collections.articles -%}
+          <li{% if page.url.startsWith(link.url) %} class="selected" {% endif %}><a
+              href="{{ link.url }}">{{ link.data.title }}</a></li>
+            {% endfor %}
+            <li>
+              <p>Created by <a href="https://remysharp.com">@rem</a></p>
+            </li>
+        </ul>
+      </nav>
+      <div class="content">
+        {{ content | safe }}
+      </div>
+
+
+      <button type="button" aria-label="Switch to light mode" class="toggle-theme" id="toggle-theme">
+        <svg viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true" class="light">
+          <g stroke-linejoin="full" stroke-linecap="full" stroke-width="2" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path d="M12 1v2"></path>
+            <path d="M12 21v2"></path>
+            <path d="M4.22 4.22l1.42 1.42"></path>
+            <path d="M18.36 18.36l1.42 1.42"></path>
+            <path d="M1 12h2"></path>
+            <path d="M21 12h2"></path>
+            <path d="M4.22 19.78l1.42-1.42"></path>
+            <path d="M18.36 5.64l1.42-1.42"></path>
+          </g>
+        </svg>
+
+        <svg viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true" class="dark">
+          <path fill="currentColor"
+            d="M21.4,13.7C20.6,13.9,19.8,14,19,14c-5,0-9-4-9-9c0-0.8,0.1-1.6,0.3-2.4c0.1-0.3,0-0.7-0.3-1 c-0.3-0.3-0.6-0.4-1-0.3C4.3,2.7,1,7.1,1,12c0,6.1,4.9,11,11,11c4.9,0,9.3-3.3,10.6-8.1c0.1-0.3,0-0.7-0.3-1 C22.1,13.7,21.7,13.6,21.4,13.7z">
+          </path>
+        </svg>
+      </button>
+    </main>
+
+    <script async defer
+      src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.forEach%2CString.prototype.endsWith%2Cfetch%2CElement.prototype.classList%2CElement.prototype.dataset%2CElement.prototype.append"></script>
+    <script async defer src="/assets/js/runner.js"></script>
+  </body>
+
 </html>

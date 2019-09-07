@@ -29,21 +29,21 @@ html {
   --simple-border: var(--nord4);
   --border-image: var(--border) 6;
 
-  @media (prefers-color-scheme: dark) {
-    --strong: white;
-    --bg: var(--nord0);
+  // @media (prefers-color-scheme: dark) {
+  //   --strong: white;
+  //   --bg: var(--nord0);
 
-    --accent: var(--nord3);
-    --link: var(--nord8);
-    --link-hover: #30cfd0;
+  //   --accent: var(--nord3);
+  //   --link: var(--nord8);
+  //   --link-hover: #30cfd0;
 
-    --text: var(--nord4);
-    --text-highlight: var(--nord2);
-    --heading: var(--nord6);
+  //   --text: var(--nord4);
+  //   --text-highlight: var(--nord2);
+  //   --heading: var(--nord6);
 
-    --border: linear-gradient(0deg, #537895 0%, #30cfd0 100%);
-    --border-image: var(--border) 6;
-  }
+  //   --border: linear-gradient(0deg, #537895 0%, #30cfd0 100%);
+  //   --border-image: var(--border) 6;
+  // }
 
   &.dark {
     --strong: white;
@@ -70,12 +70,12 @@ html {
 
   kbd {
     font-family: var(--font-mono);
-    background-color: var(--nord0);
+    background-color: var(--bg);
     border-radius: 3px;
-    border: 1px solid var(--nord4);
+    border: 1px solid var(--text);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
       0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-    color: var(--nord4);
+    color: var(--text);
     display: inline-block;
     font-size: 0.85em;
     font-weight: 700;
@@ -259,6 +259,7 @@ main {
 }
 
 .input {
+  min-height: 32px;
   border: 0;
   font-size: inherit;
   color: inherit;
@@ -284,9 +285,15 @@ pre {
     border-width: 4px;
   }
 
+  code.result:empty {
+    display: none;
+  }
+
   code.result {
+    margin-top: 12px;
+    display: inline-block;
     color: var(--strong);
-    white-space: pre-line;
+    white-space: pre-wrap;
   }
 
   code,
@@ -400,4 +407,65 @@ nav {
   &:hover {
     opacity: 0.7;
   }
+}
+
+:root.dark .toggle-theme {
+  .dark {
+    display: none;
+  }
+}
+
+:root.light .toggle-theme {
+  .light {
+    display: none;
+  }
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  background: none;
+  border: 0;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // position: relative;
+  vertical-align: middle;
+  line-height: 1.2;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  font-size: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: currentColor;
+  padding: 0;
+  margin-left: 0.5rem;
+  appearance: none;
+  transition: all 250ms;
+  user-select: none;
+  white-space: nowrap;
+  outline: none;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    color: currentColor;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    backface-visibility: hidden;
+  }
+
+  .svg:not(:root) {
+    overflow: hidden;
+  }
+}
+
+hr {
+  border: 1px solid var(--simple-border);
+  border-radius: 4px;
 }

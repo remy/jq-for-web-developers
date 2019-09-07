@@ -5,13 +5,11 @@ const markdownItAttrs = require('markdown-it-attrs');
 
 const options = {
   html: true,
-  breaks: true,
-  linkify: true,
+  // breaks: true,
+  linkify: true
 };
 
 module.exports = function(eleventyConfig) {
-  console.log(Object.keys(eleventyConfig.experiments));
-
   eleventyConfig.addJavaScriptFunction('next', () => {});
 
   eleventyConfig.addFilter('format', (s, fmt) =>
@@ -74,11 +72,11 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: 'src',
-      output: '_site',
+      output: '_site'
     },
     templateFormats: ['njk', 'md'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
-    passthroughFileCopy: true,
+    passthroughFileCopy: true
   };
 };
