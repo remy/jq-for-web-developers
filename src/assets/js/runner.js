@@ -91,7 +91,7 @@ function hookLinks() {
 function liveCodeRunner() {
   if (!jqLoaded) return;
 
-  $$('pre code').map(_ => (_.textContent = _.textContent.trim()));
+  // $$('pre code').map(_ => (_.textContent = _.textContent.trim()));
 
   $$('.language-jq')
     .filter(_ => _.dataset.source)
